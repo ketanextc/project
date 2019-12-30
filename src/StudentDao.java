@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class StudentDao {
 
-	public static Connection getConnection() {
+	/*public static Connection getConnection() {
 		Connection con=null;
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
@@ -19,7 +19,7 @@ public class StudentDao {
 		System.out.println(e);
 		}		
 		return con;
-	}
+	}*/
 	public static int save(Student s) throws SQLException
 	{
 		Connection con= StudentDao.getConnection();
