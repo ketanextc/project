@@ -18,13 +18,13 @@ public class StudentDao {
 	}
 	public static int save(Student s) throws SQLException
 	{
-		Connection con= StudentDao.getConnection();
-		PreparedStatement pstmt=con.prepareStatement("insert into prn (prn,oop,java,awp)  values (?,?,?,?)");
-		pstmt.setInt(1, s.getPrn());
-		pstmt.setInt(2, s.getOop());
-		pstmt.setInt(3, s.getJava());
-		pstmt.setInt(4, s.getAwp());
-		 int ans=pstmt.executeUpdate();
+		Connection con= StudentDao.getConnection()
+		PreparedStatement pstmt=con.prepareStatement("insert into prn (prn,oop,java,awp)  values (?,?,?,?)")
+		pstmt.setInt(1, s.getPrn())
+		pstmt.setInt(2, s.getOop())
+		pstmt.setInt(3, s.getJava())
+		pstmt.setInt(4, s.getAwp())
+		 int ans=pstmt.executeUpdate()
 		
 		return ans;
 	}
